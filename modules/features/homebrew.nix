@@ -6,7 +6,7 @@
         enable = true;
         global.brewfile = true;
         onActivation = {
-          cleanup = "zap";
+          cleanup = "none";
           autoUpdate = true;
           upgrade = true;
         };

@@ -23,6 +23,7 @@
         self.modules.darwin.homebrew
         self.modules.darwin.packages
         self.modules.darwin.zsh
+        self.modules.darwin.tmux
       ];
     };
 }

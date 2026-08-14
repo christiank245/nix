@@ -95,7 +95,7 @@ in
           la = "ls -lah";
           lt = "ls --tree --level=2";
           lta = "ls --tree --level=2 -a";
-          cd = lib.getExe pkgs.zoxide;
+          cd = "z";
           v = "NVIM_APPNAME=lazyvim ${lib.getExe pkgs.neovim}";
           atr = "${lib.getExe pkgs.atuin} scripts run";
           wm = lib.getExe' inputs'.workmux.packages.default "workmux";
