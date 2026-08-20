@@ -1,15 +1,21 @@
 {
   inputs,
   moduleWithSystem,
+  self,
   ...
 }:
 {
   flake.modules.darwin.tmux = moduleWithSystem (
     {
       self',
+      pkgs,
       ...
     }:
     {
+      environment.systemPackages = [
+        self.packages.${pkgs.stdenv.hostPlatform.system}.tmux
+      ];
+
       nixpkgs.overlays = [
         (final: prev: {
           tmux = self'.packages.tmux;
