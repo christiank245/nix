@@ -16,7 +16,6 @@ let
       oh-my-posh
       mise
       stow
-      tmux
       glab
       jq
       yq-go
