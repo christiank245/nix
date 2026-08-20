@@ -24,6 +24,7 @@
         self.modules.darwin.packages
         self.modules.darwin.zsh
         self.modules.darwin.tmux
+        self.modules.darwin.wezterm
       ];
     };
 }
