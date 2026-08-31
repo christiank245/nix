@@ -41,8 +41,6 @@
         modeKeys = "vi";
         baseIndex = 1;
         paneBaseIndex = 1;
-        terminal = "tmux-256color";
-        allowPassthrough = true; # TODO: check if this works else replace with 'set -g allow-passthrough all' in configBefore
         plugins = with pkgs.tmuxPlugins; [
           sensible
           vim-tmux-navigator
