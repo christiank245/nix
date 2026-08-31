@@ -35,6 +35,7 @@
     {
       packages.wezterm = inputs.wrappers.wrappers.wezterm.wrap ({ ... }: {
         inherit pkgs;
+        # runtimePkgs = with pkgs; [yazi];
         # also wrap gui binary not just the cli binary
         wrapperVariants.weztermGui = {
           exePath = "Applications/WezTerm.app/wezterm-gui";
@@ -43,25 +44,12 @@
         };
 
 
+        "wezterm.lua" = {
+          path = ./wezterm.lua;
+        };
+
         luaInfo = {
-          font_locator = "ConfigDirsOnly";
           font_dirs = [ "${pkgs.nerd-fonts.jetbrains-mono}/share/fonts/truetype" ];
-          font = pkgs.lib.generators.mkLuaInline ''wezterm.font("JetBrains Mono")'';
-          font_size = 11;
-          freetype_load_flags = "DEFAULT";
-          color_scheme = "Catppuccin Mocha";
-          window_decorations = "RESIZE";
-          enable_tab_bar = false;
-          window_padding = {
-            left = 8;
-            right = 8;
-            top = 8;
-            bottom = 8;
-          };
-          hide_mouse_cursor_when_typing = true;
-          colors = {
-            cursor_fg = "#000000";
-          };
         };
 
         # Add Lua packages used by require(...) in inline Lua.

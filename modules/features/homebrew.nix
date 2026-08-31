@@ -34,7 +34,6 @@
           "raycast"
           "bitwarden"
           "homerow"
-          "ghostty"
           "rambox"
           "visual-studio-code"
           "citrix-workspace"
@@ -45,6 +44,7 @@
           "tunnelblick"
           "tailscale-app"
           "orbstack"
+          "brave-browser"
         ];
 
         masApps = {

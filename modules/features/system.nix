@@ -7,6 +7,7 @@
       ];
 
       security.pam.services.sudo_local.touchIdAuth = true;
+      nixpkgs.config.allowUnsupportedSystem = true;
 
       system = {
         primaryUser = "christian.kirmse";
@@ -24,6 +25,7 @@
               "/Applications/Obsidian.app"
               "/Applications/Bitwarden.app"
               "/Applications/1Password.app"
+              "/Applications/Nix Apps/WezTerm.app"
             ];
             expose-group-apps = true;
           };
