@@ -30,7 +30,6 @@ let
       postgresql
       gh
       kind
-      yazi
       krew
       sops
       fluxcd
