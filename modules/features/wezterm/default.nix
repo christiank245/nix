@@ -35,7 +35,6 @@
     {
       packages.wezterm = inputs.wrappers.wrappers.wezterm.wrap ({ ... }: {
         inherit pkgs;
-        # runtimePkgs = with pkgs; [yazi];
         # also wrap gui binary not just the cli binary
         wrapperVariants.weztermGui = {
           exePath = "Applications/WezTerm.app/wezterm-gui";

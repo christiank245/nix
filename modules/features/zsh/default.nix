@@ -22,9 +22,9 @@ let
       k9s
       kubectx
       lazygit
+      yazi
+      tuicr
       eza
-      ripgrep
-      nmap
       bat
       tldr
       postgresql
@@ -43,8 +43,7 @@ let
       cookiecutter
       argocd
       uv
-      herdr
-      tuicr
+      devenv
     ];
 in
 {
@@ -95,6 +94,7 @@ in
           lta = "ls --tree --level=2 -a";
           cd = "z";
           v = "NVIM_APPNAME=lazyvim ${lib.getExe pkgs.neovim}";
+          vi = "${lib.getExe pkgs.neovim}";
           atr = "${lib.getExe pkgs.atuin} scripts run";
           wm = lib.getExe' inputs'.workmux.packages.default "workmux";
         };
@@ -103,6 +103,8 @@ in
           if [ -n "''${ZSH_DEBUGRC+1}" ]; then
               zmodload zsh/zprof
           fi
+          # Enable devenv auto activation
+          eval "$(${lib.getExe pkgs.devenv} hook zsh)"
           # Set up mise
           eval "$(${lib.getExe pkgs.mise} activate zsh)"
 

@@ -44,12 +44,10 @@
           "tunnelblick"
           "tailscale-app"
           "orbstack"
-          "brave-browser"
         ];
 
         masApps = {
           "Flow" = 1423210932;
-          "Flyleaf" = 6475200381;
         };
       };
 

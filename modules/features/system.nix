@@ -18,14 +18,12 @@
               "/Applications/Arc.app"
               "/System/Applications/Mail.app"
               "/System/Applications/Calendar.app"
-              "/Applications/Flyleaf.app"
               "/Applications/TickTick.app"
               "/Applications/Rambox.app"
-              "/Applications/Ghostty.app"
+              "/Applications/Nix Apps/WezTerm.app"
               "/Applications/Obsidian.app"
               "/Applications/Bitwarden.app"
               "/Applications/1Password.app"
-              "/Applications/Nix Apps/WezTerm.app"
             ];
             expose-group-apps = true;
           };
