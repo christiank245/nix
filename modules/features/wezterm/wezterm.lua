@@ -38,6 +38,8 @@ wezterm.on("window-config-reloaded", function(window, _pane)
 	recompute_dpi_override(window)
 end)
 
+local act = wezterm.action
+
 return {
 	font_locator = "ConfigDirsOnly",
 	font_dirs = nix_info({}, "font_dirs"),
@@ -63,4 +65,8 @@ return {
 	colors = {
 		cursor_fg = "#000000",
 	},
+  keys = {
+    { key = 'LeftArrow', mods = 'OPT', action = act.SendString '\x1bb' },
+    { key = 'RightArrow', mods = 'OPT', action = act.SendString '\x1bf' },
+  }
 }

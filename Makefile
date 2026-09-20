@@ -22,6 +22,15 @@ update:
 .PHONY: switch
 switch:
 	@sudo darwin-rebuild switch --flake .#macbook
+	@$(MAKE) refresh-launchers
+
+## refresh-launchers: Refresh Dock and Raycast app resolution
+.PHONY: refresh-launchers
+refresh-launchers:
+	@pkill -f '/Applications/Raycast.app' >/dev/null 2>&1 || true
+	@pkill -f 'com.raycast.macos' >/dev/null 2>&1 || true
+	@killall Raycast >/dev/null 2>&1 || true
+# 	@open -g "/Applications/Raycast.app" >/dev/null 2>&1 || true
 
 ## switch-dry: Switch to defined environment
 .PHONY: switch-dry

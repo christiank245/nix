@@ -44,6 +44,7 @@ let
       argocd
       uv
       devenv
+      yaml-language-server
     ];
 in
 {
