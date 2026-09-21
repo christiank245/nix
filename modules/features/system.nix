@@ -6,6 +6,8 @@
         pkgs.nerd-fonts.jetbrains-mono
       ];
 
+      # Required so Touch ID sudo auth also works inside tmux/screen sessions.
+      security.pam.services.sudo_local.reattach = true;
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnsupportedSystem = true;
 
