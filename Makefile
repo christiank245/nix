@@ -22,7 +22,6 @@ update:
 .PHONY: switch
 switch:
 	@sudo darwin-rebuild switch --flake .#macbook
-	@$(MAKE) refresh-launchers
 
 ## refresh-launchers: Refresh Dock and Raycast app resolution
 .PHONY: refresh-launchers
