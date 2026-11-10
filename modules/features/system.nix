@@ -54,6 +54,9 @@
               DSDontWriteNetworkStores = true;
               DSDontWriteUSBStores = true;
             };
+            "com.github.wez.wezterm" = {
+              ApplePressAndHoldEnabled = false;
+            };
           };
         };
       };
